@@ -25,7 +25,7 @@ namespace Rookie.Ecom.Dashboard.Controllers
         [HttpGet]
         public async Task<IEnumerable<ProductDto>> GetAsync()
         {
-            return await _categoryService.GetAllAsync();
+            return (IEnumerable<ProductDto>)await _categoryService.GetAllAsync();
         }
     }
 }
